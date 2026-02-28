@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    image: recruitment-assistant:latest
+    command: ["uv", "run", "uvicorn", "recruitment_assistant.api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    ports:
+      - "8000:8000"
+    env_file: .env
+    restart: unless-stopped
+
+  ui:
+    build: .
+    image: recruitment-assistant-ui:latest
+    command: ["uv", "run", "python", "-m", "streamlit", "run", "recruitment_assistant/ui/app.py", "--server.headless", "true", "--server.port", "8501", "--server.address", "0.0.0.0"]
+    ports:
+      - "8501:8501"
+    env_file: .env
+    depends_on:
+      - api
+    restart: unless-stopped
