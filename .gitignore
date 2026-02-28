@@ -1,0 +1,46 @@
+﻿# ---- uv ----
+.uv/
+
+# ---- Virtual environments ----
+.venv/
+venv/
+env/
+
+# ---- dotenv (usually secrets) ----
+.env
+.env.*
+!.env.example
+
+# ---- Python caches ----
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Tests / coverage
+.coverage
+htmlcov/
+nosetests.xml
+coverage.xml
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# VS Code / IDE
+.vscode/
+.cursor/
+.idea/
+*.swp
+*.swo
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
