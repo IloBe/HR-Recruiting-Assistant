@@ -30,6 +30,9 @@ htmlcov/
 nosetests.xml
 coverage.xml
 
+# Log files
+logs/*.*
+
 # Jupyter Notebooks
 .ipynb_checkpoints
 
