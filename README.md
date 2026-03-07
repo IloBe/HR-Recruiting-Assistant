@@ -184,30 +184,30 @@ REST endpoints for:
    ```bash
    uv run pytest
 
-This covers:
-- Crew agents.
-- CampaignStore and core logic.
-- FastAPI routes and helpers.
+   This covers:
+   - Crew agents.
+   - CampaignStore and core logic.
+   - FastAPI routes and helpers.
 
 2. UI‑level tests are currently manual; follow the QA plan for workflow validation and report‑export checks. The full suite should pass before any release.
 
 ---
 
 ## Limitations
-1. The store is in-memory, so a restart loses campaigns/audit logs; migrating to a database is planned.
-2. LLM responses can still hallucinate; the UI relies on human review of rationales and bias flags before outreach.
-3. PDF exports assume the API returns metrics/rationale; any schema drift requires updating `ui/report_utils.py`.
-4. Non-English languages are not fully supported yet.
+- The store is in-memory, so a restart loses campaigns/audit logs; migrating to a database is planned.
+- LLM responses can still hallucinate; the UI relies on human review of rationales and bias flags before outreach.
+- PDF exports assume the API returns metrics/rationale; any schema drift requires updating `ui/report_utils.py`.
+- Non-English languages are not fully supported yet.
 
 ---
 
 ## Roadmap
-1. Persist campaigns in PostgreSQL or SQLite with migrations, adding audited storage tables, indexes, and retention policies for candidate metadata and audit trails.
-2. Introduce a keyed content retrieval layer (vector search + normalized candidate cache) so downstream reports and PDFs can query rationale/history without replaying CrewAI prompts.
-3. Add real integrations for Serper, Browserless, and SendGrid with authenticated credentials.
-4. Harden JWT-based auth for the API + rate limiting.
-5. Expand automated UI tests (e.g., Playwright) for Streamlit flows.
-6. Introduce real-time WebSocket status streaming and CrewAI metric dashboards.
+- Persist campaigns in PostgreSQL or SQLite with migrations, adding audited storage tables, indexes, and retention policies for candidate metadata and audit trails.
+- Introduce a keyed content retrieval layer (vector search + normalized candidate cache) so downstream reports and PDFs can query rationale/history without replaying CrewAI prompts.
+- Add real integrations for Serper, Browserless, and SendGrid with authenticated credentials.
+- Harden JWT-based auth for the API + rate limiting.
+- Expand automated UI tests (e.g., Playwright) for Streamlit flows.
+- Introduce real-time WebSocket status streaming and CrewAI metric dashboards.
 
 ---
 
