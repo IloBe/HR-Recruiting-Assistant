@@ -184,10 +184,10 @@ REST endpoints for:
    ```bash
    uv run pytest
 
-   This covers:
-   - Crew agents.
-   - CampaignStore and core logic.
-   - FastAPI routes and helpers.
+This covers:
+- Crew agents.
+- CampaignStore and core logic.
+- FastAPI routes and helpers.
 
 2. UI‑level tests are currently manual; follow the QA plan for workflow validation and report‑export checks. The full suite should pass before any release.
 
