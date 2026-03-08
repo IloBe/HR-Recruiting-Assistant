@@ -212,7 +212,7 @@ This covers:
 ---
 
 ## License
-Apache License 2.0. See [LICENSE](https://www.apache.org/licenses/LICENSE-2.0) for full terms.
+Licensed under the Apache License, Version 2.0. See [LICENSE](./LICENSE).
 
 ---
 
