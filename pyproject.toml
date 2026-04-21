@@ -5,7 +5,7 @@ description = "Multi-Agent Recruitment System"
 readme = "README.md"
 requires-python = ">=3.12.5"
 dependencies = [
-    "python-dotenv>=1.2.1",
+    "python-dotenv>=1.2.2",
     "crewai>=0.10.0",
     "fastapi>=0.115.0",
     "streamlit>=1.40.0",
